@@ -12,15 +12,17 @@ http.createServer(function (request, response) {
     /* lets try to read the html page found */
     if (fileName === 'todo') {
         type = 'application/json';
-        fileSystem.readFile(fileName + '.json', callback);
+        fileName += '.json';
     } else if (fileName === 'index') {
-        fileSystem.readFile('index2.html', callback);
+        fileName = 'index2.html';
     } else if (fileName === 'read-todo') {
-        fileSystem.readFile(fileName + '.html', callback);
+        fileName += '.html';
     } else {
         redirect = true;
-        fileSystem.readFile('index2.html', callback);
+        fileName = 'index2.html';
     }
+
+    fileSystem.readFile(fileName, callback);
 
     function callback(err, data) {
         if (err) {
