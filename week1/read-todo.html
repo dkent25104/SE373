@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>read-todo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <script type="text/javascript">
+                      
+            let myRequest = 'todo'
+            
+            fetch(myRequest)
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(json) { 
+                console.log(json)
+                for (let index in json) {
+                    document.write('UserId: ' + json[index].userId + ' Id: ' + json[index].id + ' Title: ' + json[index].title + ' Completed: ' + json[index].completed + '<br>');
+                    //console.log(`Home ${index} has ${arr[index].Doors} doors and ${arr[index].Rooms} rooms.`)
+                }
+            })
+           
+        </script>
+        
+    </body>
+</html>
