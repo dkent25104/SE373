@@ -14,7 +14,7 @@ app.get("/index", (req,res)=>{   //or function(){} instead of ()=>{}
     res.render("index.hbs", {junk:"My name is Bobert."});
 });
 
-app.get("/results", (req,res)=>{   //or function(){} instead of ()=>{}
+app.all("/results", (req,res)=>{   //or function(){} instead of ()=>{}
     //res.sendFile(path.join(__dirname, "/public/index.html"));
     res.render("results.hbs", {first:req.body.first, last:req.body.last});
 });
