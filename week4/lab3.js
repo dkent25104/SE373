@@ -39,8 +39,38 @@ hbs.registerHelper('generateGrid', (num)=>{
     return new hbs.handlebars.SafeString(str);
 });
 
-app.all('/',(req,res)=>{
+hbs.registerHelper('error404', ()=>{
+    var str = '<table>';
+    for(let x = 0; x < 6; x++) {
+        str += '<tr>';
+        for (let y = 0; y < 6; y++) {
+            var num = Math.floor(Math.random()*3);
+            var style = '';
+            switch (num) {
+                case 0:
+                    style = 'still';
+                    break;
+                case 1:
+                    style = 'rotate';
+                    break;
+                case 2:
+                    style = 'shrink';
+                    break;
+            }
+            str += '<td class="' + style + '">404</td>';
+        }
+        str += '</tr>';
+    }
+    str += '</table>';
+    return new hbs.handlebars.SafeString(str);
+});
+
+app.all('/', (req,res)=>{
     res.render('L3index', {number:req.body.num});
+});
+
+app.get('/*', (req,res)=>{
+    res.render('error');
 });
 
 app.listen(3000, ()=>{console.log("Server running on localhost:3000")});
