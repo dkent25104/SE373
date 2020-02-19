@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Update</title>
+</head>
+<body>
+    {{> nav}}
+
+    <h2>Update Employee</h2>
+    <!--copy form, use employee.fName, .lName, etc.-->
+    <form method="post" action="/update">
+        <input type="hidden" name="id" value="{{employee._id}}" />
+        First Name: <input type="text" name="firstName" value="{{employee.firstName}}" /><br />
+        Last Name: <input type="text" name="lastName" value="{{employee.lastName}}" /><br />
+        Department: <select name="department">
+            {{selectOptions employee.department}}
+        </select><br />
+        Star Date: <input type="date" name="startDate" value="{{date}}" /><br />
+        Job Title: <input type="text" name="jobTitle" value="{{employee.jobTitle}}" /><br />
+        Salary: <input type="number" name="salary" value="{{employee.salary}}" /><br />
+        <input type="submit" value="submit" />
+    </form>
+</body>
+</html>

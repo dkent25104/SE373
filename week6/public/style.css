@@ -1,0 +1,52 @@
+html {
+    background: rgb(247,127,0);
+    background: linear-gradient(90deg, rgba(247,127,0,1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(247,127,0,1) 100%);
+}
+
+body {
+    width: 50%;
+    margin: 0px auto;
+    text-align:center;
+}
+
+nav ul {
+    padding: 0px;
+}
+
+nav ul li{
+    display: inline;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:link {
+    color: cornflowerblue;
+}
+
+a:hover {
+    color: crimson;
+    transition: .3s;
+}
+
+a:visited {
+    color: cornflowerblue;
+}
+
+form {
+    line-height: 50px;
+}
+
+table {
+    margin: 0px auto;
+    margin-top:50px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+tr, td {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+}

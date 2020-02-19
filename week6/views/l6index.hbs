@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Index</title>
+</head>
+<body>
+    {{> nav}}
+
+    <h2>Create Employee</h2>
+    <form method="post" action="/index">
+        First Name: <input type="text" name="firstName" /><br />
+        Last Name: <input type="text" name="lastName" /><br />
+        Department: <select name="department">
+            {{selectOptions}}
+        </select><br />
+        Start Date: <input type="date" name="startDate" /><br />
+        Job Title: <input type="text" name="jobTitle" /><br />
+        Salary: $<input type="number" name="salary" /><br />
+        <input type="submit" value="submit" />
+    </form>
+</body>
+</html>
