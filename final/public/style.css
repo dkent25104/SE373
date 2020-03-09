@@ -1,0 +1,41 @@
+body {
+    background-image: linear-gradient(firebrick, bisque);
+    background-attachment: fixed;
+    width: 75%;
+    margin: 0px auto;
+}
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+nav ul {
+    padding: 10px;
+}
+nav ul li {
+    display: inline;
+    margin: 25px;
+}
+table {
+    text-align: center;
+    text-align: left;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    table-layout: fixed;
+}
+tbody tr {
+    border-top: 2px solid royalblue;
+}
+td {
+    padding: 5px;
+}
+.short {
+    width: 150px;
+}
+.long {
+    width: 400px;
+}
+.medium {
+    width: 250px;
+}
